@@ -15,5 +15,10 @@ values(1,'sona',21,'sona2gmail.com',0838402402),
 	  (3,'sona2',23,'sona223gmail.com',2838402402),
 	  (4,'sona3',24,'sona2000gmail.com',5838402402);
 
+insert into	constraint_practice(e_id,e_name,e_age,e_email,ph_no
+)
+values(6,'sona',21,'sona287gmail.com',6838402402),
+	  (5,'sonaka',27,'sona002gmail.com',7838402402);
+
 
 select * from constraint_practice;
