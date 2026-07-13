@@ -1,0 +1,31 @@
+CREATE TABLE BankAccount
+(
+    AccNo INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Balance DECIMAL(10,2)
+);
+
+INSERT INTO BankAccount
+VALUES
+(101,'SONA',50000),
+(102,'Ale',30000);
+
+SELECT * FROM BankAccount;
+
+BEGIN TRANSACTION;
+
+UPDATE BankAccount
+SET Balance = Balance - 10000
+WHERE AccNo = 101;
+
+SAVE TRANSACTION Save1;
+
+UPDATE BankAccount
+SET Balance = Balance + 10000
+WHERE AccNo = 102;
+
+SAVE TRANSACTION Save2;
+
+ROLLBACK TRANSACTION Save1;
+
+COMMIT;
