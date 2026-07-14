@@ -90,7 +90,7 @@ select e.empname
 select m.empname as manager, count(e.empid) as no_ofemp
     from Emp_practice m  inner join Emp_practice e
     on e.ManagerID=m.EmpID group by m.EmpName having count(e.empid)>1
-    ok
+  
 
 --Display the manager name and the number of employees 
 --under each manager, 
